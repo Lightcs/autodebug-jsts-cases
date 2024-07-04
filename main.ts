@@ -1,6 +1,6 @@
 import { quickSort } from "./lib";
 const arr = [5, 3, 8, 4, 2, 1, 9, 7, 6];
-const sortedArr = quickSort(arr, true);
+const sortedArr = quickSort(arr, 'asc');
 
 console.log(sortedArr);
 

@@ -1,4 +1,4 @@
-export function quickSort(arr: Array<number>, asc: boolean){
+export function quickSort(arr: Array<number>, asc: boolean): Array<number> {
     if (arr.length <= 1) {
         return arr;
     }
