@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const handler = require('./handler');
-
-app.get('/', handler.HandlerMain);
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.json());
 app.post('/calculate', handler.HandlerCalculate);
 
 app.listen(3000, () => {
