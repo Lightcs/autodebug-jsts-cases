@@ -1,4 +1,8 @@
-export function quickSort(arr: Array<number>, asc: boolean){
+export function quickSort(arr: Array<number>, order: String): Array<number> {
+    if (order !== 'asc' && order !== 'desc') {
+        throw new Error('Invalid param');
+    }
+    const asc = order === 'asc';
     if (arr.length <= 1) {
         return arr;
     }
@@ -19,5 +23,5 @@ export function quickSort(arr: Array<number>, asc: boolean){
         }
     }
 
-    return [...quickSort(left, asc), pivot, ...quickSort(right, asc)];
+    return [...quickSort(left, order), pivot, ...quickSort(right, order)];
 }
