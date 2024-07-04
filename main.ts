@@ -1,13 +1,12 @@
 import { quickSort } from "./lib";
-import { exit } from "process";
 
 const arr = [5, 3, 8, 4, 2, 1, 9, 7, 6];
 let sortedArr: Array<number> = [];
 try {
-    sortedArr = quickSort(arr, 'ascend');
+    sortedArr = quickSort(arr, 'asc');
 } catch (e) {
     console.error(`failed to do quick sort: ${e}`);
-    exit(1);
+    process.exit(1);
 }
 
 console.log(sortedArr);
