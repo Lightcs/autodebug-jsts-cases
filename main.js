@@ -1,4 +1,3 @@
-const lib = require('./lib');
 const arr = [5, 3, 8, 4, 2, 1, 9, 7, 6];
 const sortedArr = lib.quickSort(arr);
 
